@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadari Bheem | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @keyframes orbit {
+            0% {
+                transform: rotateX(60deg) rotateZ(0deg);
+            }
+
+            100% {
+                transform: rotateX(60deg) rotateZ(360deg);
+            }
+        }
+
+        @keyframes counter-orbit {
+            0% {
+                transform: rotateZ(0deg) rotateX(-60deg);
+            }
+
+            100% {
+                transform: rotateZ(-360deg) rotateX(-60deg);
+            }
+        }
+
+        .orbit-container {
+            animation: orbit 20s linear infinite;
+            transform-style: preserve-3d;
+        }
+
+        /* Counter orbit keeps the icons upright while they spin around the container */
+        .orbit-item {
+            animation: counter-orbit 20s linear infinite;
+            transform-style: preserve-3d;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-blue-500/30 relative overflow-x-hidden">
+
+    <!-- Ambient Background Effects -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-600/10 blur-[120px]"></div>
+        <div class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-purple-600/10 blur-[120px]">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-black tracking-tighter text-white">
+                Gadari<span class="text-blue-500">Bheem</span>
+            </div>
+            <div class="flex gap-4">
+                <a href="https://github.com/BheemGadri" target="_blank" rel="noreferrer"
+                    class="text-slate-400 hover:text-white transition-colors"><img
+                        src="Assets/github-removebg-preview.png" alt="GitHub"
+                        class="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition-opacity brightness-0 invert" /></a>
+                <a href="https://www.youtube.com/@GadariBheemlal" target="_blank" rel="noreferrer"
+                    class="text-slate-400 hover:text-[#FF0000] transition-colors">
+                    <img src="youtube.png" alt="YouTube"
+                        class="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition-opacity" />
+                </a>
+                <a href="https://www.linkedin.com/in/bheem-gadari-5812693a3" target="_blank" rel="noreferrer"
+                    class="text-slate-400 hover:text-[#0077B5] transition-colors"><img
+                        src="Assets/lin-removebg-preview.png" alt="LinkedIn"
+                        class="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition-opacity" /></a>
+                <a href="https://gadari-bheem.itch.io/dark-deception-light" target="_blank" rel="noreferrer"
+                    class="text-slate-400 hover:text-[#fa5c5c] transition-colors"><i data-lucide="gamepad-2"
+                        class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between gap-12">
+        <div class="flex-1 space-y-6 text-center md:text-left">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-sm font-medium border border-blue-500/20">
+                <i data-lucide="code-2" class="w-4 h-4"></i> Game Developer / Programmer
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black text-white leading-tight">
+                Hi, I'm <br /><span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-sm">Gadari
+                    Bheem</span>
+            </h1>
+            <p class="text-lg text-slate-400 max-w-xl leading-relaxed mx-auto md:mx-0">
+                Passionate 3rd-year Computer Engineering student with hands-on experience in game development using
+                Godot 4 / Unity and GDScript/C#. Focused on gameplay mechanics, performance optimization, and immersive
+                UI design.
+            </p>
+            <p class="text-lg text-slate-400 max-w-xl leading-relaxed mx-auto md:mx-0">As a Gamer, I find fun in game
+                development</p>
+
+            <div class="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
+                <div
+                    class="flex items-center gap-2 text-slate-300 text-sm bg-slate-800 px-4 py-2 rounded-lg border border-slate-700">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-blue-400"></i> Ahmedabad, Gujarat
+                </div>
+                <div
+                    class="flex items-center gap-2 text-slate-300 text-sm bg-slate-800 px-4 py-2 rounded-lg border border-slate-700">
+                    <i data-lucide="mail" class="w-4 h-4 text-emerald-400"></i> bheemgadri14@gmail.com
+                </div>
+            </div>
+        </div>
+
+        <!-- Orbiting Profile Picture -->
+        <div class="w-72 h-72 relative flex items-center justify-center shrink-0 mt-8 md:mt-0"
+            style="perspective: 1200px; transform-style: preserve-3d;">
+            <!-- Profile Image (Static Center) -->
+            <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-slate-800 shadow-[0_0_30px_rgba(0,0,0,0.8)] relative bg-slate-800"
+                style="transform: translateZ(1px);">
+                <img src="profile.jpg" alt="Gadari Bheem" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Rotating Container (Rendered in true 3D to orbit behind and in front) -->
+            <div class="absolute inset-[-60px] orbit-container rounded-full border-[1.5px] border-slate-700/50 pointer-events-none"
+                style="transform-style: preserve-3d;">
+
+                <!-- Orbiting Icons (Using negative margins instead of translates to prevent 3D coordinate pollution) -->
+                <!-- Top: Unity -->
+                <div
+                    class="absolute top-0 left-1/2 orbit-item w-16 h-16 -ml-8 -mt-8 bg-slate-800/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.15)] border border-slate-600/80 p-3 pointer-events-auto">
+                    <img src="unity.png" alt="Unity Engine"
+                        class="w-full h-full object-contain drop-shadow-[0_0_5px_rgba(255,255,255,0.7)]" />
+                </div>
+
+                <!-- Bottom Right: Godot -->
+                <div
+                    class="absolute top-[75%] left-[93.3%] orbit-item w-16 h-16 -ml-8 -mt-8 bg-slate-800/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(62,142,208,0.25)] border border-slate-600/80 p-3 pointer-events-auto">
+                    <img src="godot.png" alt="Godot Engine"
+                        class="w-full h-full object-contain drop-shadow-[0_0_5px_rgba(62,142,208,0.7)]" />
+                </div>
+
+                <!-- Bottom Left: C# -->
+                <div
+                    class="absolute top-[75%] left-[6.7%] orbit-item w-16 h-16 -ml-8 -mt-8 bg-slate-800/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(155,79,150,0.25)] border border-slate-600/80 p-3 pointer-events-auto">
+                    <img src="csharp.png" alt="C#"
+                        class="w-full h-full object-contain drop-shadow-[0_0_5px_rgba(155,79,150,0.7)]" />
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+    <section class="bg-slate-900 border-y border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold flex items-center gap-2"><i data-lucide="gamepad-2"
+                            class="w-5 h-5 text-blue-400"></i> Engines</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><strong class="text-slate-200">Godot 4</strong> </li>
+                        <li><strong class="text-slate-200">Unity</strong> </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold flex items-center gap-2"><i data-lucide="code-2"
+                            class="w-5 h-5 text-emerald-400"></i> Programming</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><strong class="text-slate-200">GDScript</strong> </li>
+                        <li><strong class="text-slate-200">C++ / C#</strong> </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold flex items-center gap-2"><i data-lucide="book-open"
+                            class="w-5 h-5 text-purple-400"></i> Development</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li>2D & 3D Game Logic</li>
+                        <li>Physics Simulation</li>
+                        <li>UI Design & Implementation</li>
+                        <li>HTML5/WebGL Optimization</li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold flex items-center gap-2"><i data-lucide="external-link"
+                            class="w-5 h-5 text-orange-400"></i> Tools & Other</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li>Git & GitHub</li>
+                        <li>Visual Studio Community</li>
+                        <li>Pixalart</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="max-w-6xl mx-auto px-6 py-24">
+        <div class="flex items-center gap-4 mb-12">
+            <h2 class="text-3xl md:text-4xl font-black text-white">Featured Projects</h2>
+            <div class="h-px bg-slate-800 flex-1 mt-2"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Project 1 -->
+            <div
+                class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-blue-500 hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-blue-500/20 flex flex-col">
+                <div
+                    class="project-media relative w-full aspect-video bg-slate-900 cursor-pointer overflow-hidden group">
+                    <!-- Play Icon Overlay -->
+                    <div
+                        class="absolute inset-0 z-10 flex items-center justify-center bg-black/20 transition-opacity duration-300 pointer-events-none group-hover:opacity-0">
+                        <div
+                            class="w-12 h-12 bg-black/60 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+                            <i data-lucide="play" class="w-6 h-6 text-white ml-1"></i>
+                        </div>
+                    </div>
+
+                    <img src="dark_deception.jpg" alt="Dark Deception Light"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+
+                    <video src="Assets/2026-01-21 12-55-11 (online-video-cutter.com).mp4" muted loop playsinline
+                        class="project-video absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100"></video>
+
+                    <div
+                        class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-blue-400 z-20">
+                        Godot 4
+                    </div>
+                </div>
+
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-white">Dark Deception Light</h3>
+                    </div>
+                    <p class="text-blue-400 text-sm mb-3 font-medium">Solo Developer • Released & Playable</p>
+                    <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+                        A high-tension 3D survival horror chase game with continuous enemy AI pursuit. Designed
+                        atmospheric environments, UI elements, and complex chase mechanics using GDScript. Optimized for
+                        HTML5/WebGL for smooth browser-based gameplay.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <a href="https://gadari-bheem.itch.io/dark-deception-light" target="_blank"
+                            rel="noopener noreferrer"
+                            class="flex items-center gap-2 px-4 py-2 bg-[#fa5c5c] hover:bg-[#ff7272] text-white rounded-lg transition-colors text-sm font-bold shadow-lg shadow-[#fa5c5c]/20">
+                            <i data-lucide="gamepad-2" class="w-4 h-4"></i> Play on Web
+                        </a>
+                        <a href="https://github.com/BheemGadri" target="_blank" rel="noopener noreferrer"
+                            class="flex items-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors text-sm font-medium">
+                            <img src="Assets/github-removebg-preview.png" alt="GitHub"
+                                class="w-4 h-4 object-contain brightness-0 invert" /> Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div
+                class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-blue-500 hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-blue-500/20 flex flex-col">
+                <div
+                    class="project-media relative w-full aspect-video bg-slate-900 cursor-pointer overflow-hidden group">
+                    <div
+                        class="absolute inset-0 z-10 flex items-center justify-center bg-black/20 transition-opacity duration-300 pointer-events-none group-hover:opacity-0">
+                        <div
+                            class="w-12 h-12 bg-black/60 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+                            <i data-lucide="play" class="w-6 h-6 text-white ml-1"></i>
+                        </div>
+                    </div>
+                    <img src="Assets/disaster.png" alt="Disaster Awareness Simulator"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                    <video src="Assets/Eathquake -voronoi shatter - prototype (online-video-cutter.com).mp4" muted loop
+                        playsinline
+                        class="project-video absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100"></video>
+                    <div
+                        class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-blue-400 z-20">
+                        Godot 4
+                    </div>
+                </div>
+
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-white">Disaster Awareness Simulator</h3>
+                    </div>
+                    <p class="text-blue-400 text-sm mb-3 font-medium">Lead Developer • Hackathon Winner</p>
+                    <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+                        Winner of Inter-College Hackathon. An educational 3D simulation teaching earthquake safety
+                        protocols. Implemented realistic physics effects including ground shaking and structural damage
+                        using Voronoi shatter techniques, alongside an intuitive UI for time-critical decision-making.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <a href="https://github.com/BheemGadri" target="_blank" rel="noopener noreferrer"
+                            class="flex items-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors text-sm font-medium">
+                            <img src="Assets/github-removebg-preview.png" alt="GitHub"
+                                class="w-4 h-4 object-contain brightness-0 invert" /> Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div
+                class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-blue-500 hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-blue-500/20 flex flex-col">
+                <div
+                    class="project-media relative w-full aspect-video bg-slate-900 cursor-pointer overflow-hidden group">
+                    <div
+                        class="absolute inset-0 z-10 flex items-center justify-center bg-black/20 transition-opacity duration-300 pointer-events-none group-hover:opacity-0">
+                        <div
+                            class="w-12 h-12 bg-black/60 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+                            <i data-lucide="play" class="w-6 h-6 text-white ml-1"></i>
+                        </div>
+                    </div>
+                    <img src="crimson_tactics.jpg" alt="Crimson Tactics"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                    <video src="Assets/game view rec (1).mp4" muted loop playsinline
+                        class="project-video absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100"></video>
+                    <div
+                        class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-blue-400 z-20">
+                        Unity (C#)
+                    </div>
+                </div>
+
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-white">Crimson Tactics - Movement System</h3>
+                    </div>
+                    <p class="text-blue-400 text-sm mb-3 font-medium">Developer • Prototype</p>
+                    <p class="text-slate-400 text-sm mb-6 flex-1 leading-relaxed">
+                        Developed a prototype of a tactical grid-based movement system. Implemented tile-based player
+                        movement and path navigation suitable for strategy or tactics games. Focused on core gameplay
+                        mechanics and system design for scalable grid-based game logic.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <a href="https://github.com/BheemGadri" target="_blank" rel="noopener noreferrer"
+                            class="flex items-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors text-sm font-medium">
+                            <img src="Assets/github-removebg-preview.png" alt="GitHub"
+                                class="w-4 h-4 object-contain brightness-0 invert" /> Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Content Creation Showcase Note -->
+        <div
+            class="mt-12 p-6 md:p-8 bg-slate-800/50 border border-slate-700 rounded-2xl flex flex-col md:flex-row gap-6 items-center">
+            <div class="relative shrink-0">
+                <div class="w-20 h-20 rounded-full border-4 border-slate-700 overflow-hidden shadow-lg bg-slate-900">
+                    <img src="profile.jpg" alt="Profile" class="w-full h-full object-cover" />
+                </div>
+                <div
+                    class="absolute -bottom-1 -right-1 bg-slate-800 rounded-full p-1.5 border border-slate-700 shadow-lg flex items-center justify-center w-8 h-8">
+                    <img src="youtube.png" alt="YouTube" class="w-full h-full object-contain" />
+                </div>
+            </div>
+            <div class="flex-1 text-center md:text-left">
+                <h3 class="text-xl font-bold text-white mb-2">Content Creation & Prototyping</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    I maintain an active YouTube channel where I regularly upload short gameplay clips and project
+                    showcases.
+                    These videos demonstrate my UI design skills, gameplay mechanics, and additional projects including
+                    2D platformers and experimental prototypes developed using Godot and Unity.
+                </p>
+            </div>
+            <a href="https://www.youtube.com/@GadariBheemlal" target="_blank" rel="noreferrer"
+                class="px-6 py-3 bg-red-600 hover:bg-red-500 text-white font-bold rounded-lg transition-colors whitespace-nowrap">
+                Visit Channel
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section class="bg-slate-900 border-t border-slate-800 pt-20 pb-24">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-black text-white mb-6">Let's Connect</h2>
+            <p class="text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                I'm actively seeking game development internships and collaborative opportunities. Check out my work or
+                feel free to reach out to me through any of the platforms below!
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+                <a href="https://github.com/BheemGadri" target="_blank" rel="noreferrer"
+                    class="flex items-center gap-3 px-6 py-4 bg-slate-800 hover:bg-slate-700 hover:scale-105 transition-all duration-300 rounded-xl border border-slate-700 hover:border-white shadow-lg group">
+                    <img src="Assets/github-removebg-preview.png" alt="GitHub"
+                        class="w-6 h-6 object-contain brightness-0 invert" />
+                    <span class="font-bold text-white">GitHub</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/bheem-gadari-5812693a3" target="_blank" rel="noreferrer"
+                    class="flex items-center gap-3 px-6 py-4 bg-slate-800 hover:bg-[#0077B5]/10 hover:scale-105 transition-all duration-300 rounded-xl border border-slate-700 hover:border-[#0077B5] shadow-lg group">
+                    <img src="Assets/lin-removebg-preview.png" alt="LinkedIn" class="w-6 h-6 object-contain" />
+                    <span class="font-bold text-white">LinkedIn</span>
+                </a>
+
+                <a href="https://www.youtube.com/@GadariBheemlal" target="_blank" rel="noreferrer"
+                    class="flex items-center gap-3 px-6 py-4 bg-slate-800 hover:bg-[#FF0000]/10 hover:scale-105 transition-all duration-300 rounded-xl border border-slate-700 hover:border-[#FF0000] shadow-lg group">
+                    <img src="youtube.png" alt="YouTube" class="w-6 h-6 object-contain" />
+                    <span class="font-bold text-white">YouTube</span>
+                </a>
+
+                <a href="https://gadari-bheem.itch.io/dark-deception-light" target="_blank" rel="noreferrer"
+                    class="flex items-center gap-3 px-6 py-4 bg-slate-800 hover:bg-[#fa5c5c]/10 hover:scale-105 transition-all duration-300 rounded-xl border border-slate-700 hover:border-[#fa5c5c] shadow-lg group">
+                    <i data-lucide="gamepad-2" class="w-6 h-6 text-[#fa5c5c]"></i>
+                    <span class="font-bold text-white">Itch.io</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Info -->
+    <footer class="bg-slate-950 py-12 border-t border-slate-800">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <p class="font-semibold text-slate-300">🎓 Education</p>
+                <p>B.E. Computer Engineering • GTU-ITR, Mahesana (Expected 2027)</p>
+            </div>
+            <div class="flex flex-col items-center gap-2 text-center">
+                <p class="font-semibold text-yellow-500 flex items-center gap-1"><i data-lucide="award"
+                        class="w-4 h-4"></i> Achievements</p>
+                <p>1st Place - Inter-College Game Hackathon</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end gap-2">
+                <p class="font-semibold text-slate-300">🌍 Languages</p>
+                <p>English • Hindi • Gujarati</p>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-slate-600 text-sm">
+            © 2026 Gadari Bheem. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Handle Video Play on Hover
+        const projectMedias = document.querySelectorAll('.project-media');
+
+        projectMedias.forEach(media => {
+            const video = media.querySelector('.project-video');
+            let playPromise;
+
+            media.addEventListener('mouseenter', () => {
+                if (video) {
+                    playPromise = video.play();
+                    if (playPromise !== undefined) {
+                        playPromise.catch(err => console.log("Autoplay prevented:", err));
+                    }
+                }
+            });
+
+            media.addEventListener('mouseleave', () => {
+                if (video) {
+                    if (playPromise !== undefined) {
+                        playPromise.then(() => {
+                            video.pause();
+                            video.currentTime = 0;
+                        }).catch(err => {
+                            // Autoplay was prevented
+                        });
+                    } else {
+                        video.pause();
+                        video.currentTime = 0;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
